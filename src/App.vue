@@ -1,15 +1,20 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <UploadScreen></UploadScreen>
+    <DownloadScreen></DownloadScreen>
+  </div>
+  
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DownloadScreen from './components/DownloadScreen.vue';
+import UploadScreen from './components/UploadScreen.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UploadScreen,
+    DownloadScreen
   }
 }
 </script>
@@ -22,5 +27,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 </style>
